@@ -2,18 +2,14 @@
 📚 Tutorly
 </h2>
  <h3>
-   📚 Tutorly app using Vue 3, Vite, Tailwind CSS and
-   Firebase
+   📚 Tutorly app
   </h3>
 
 <pre align="center">
-🧪 Working in Progress
+🧪 Work in Progress
 </pre>
 
 ## App Features
 
-- 🔐 Firebase Auth
-- 🔥 Firebase Firestore
-- 💾 Firebase Storage
 - 👱 Profile Management
-- 🗒️ CRUD for Private Notes
+- 🗒️ Private Notes
