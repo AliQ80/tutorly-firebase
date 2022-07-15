@@ -7,6 +7,6 @@ module.exports = {
         salsa: ['"Salsa"', 'cursive']
       }
     },
-    plugins: [require('@tailwindcss/typography')]
+    plugins: [require('@tailwindcss/typography'), require('daisyui')]
   }
 }
