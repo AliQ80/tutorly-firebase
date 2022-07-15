@@ -1,6 +1,6 @@
 {
-  "name": "firekit-vue3-template",
-  "version": "0.0.0",
+  "name": "tutorly",
+  "version": "0.1.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
