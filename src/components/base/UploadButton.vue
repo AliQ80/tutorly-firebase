@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center">
+  <!-- <div class="flex justify-center">
     <div class="w-full">
       <input
         id="formFile"
@@ -7,5 +7,13 @@
         type="file"
       />
     </div>
-  </div>
+  </div> -->
+  <label class="block">
+    <span class="sr-only">Choose profile photo</span>
+    <input
+      id="formFile"
+      type="file"
+      class="form-control block w-full text-sm text-slate-500 file:mr-4 file:rounded-full file:border-0 file:bg-violet-50 file:py-2 file:px-4 file:text-sm file:font-semibold file:text-violet-700 hover:file:bg-violet-100"
+    />
+  </label>
 </template>
