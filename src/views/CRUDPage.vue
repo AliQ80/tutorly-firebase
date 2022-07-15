@@ -29,9 +29,6 @@ function cancel() {
     </button>
     <div class="mt-10">
       <p class="text-lg">Private Note List</p>
-      <span class="text-sm text-gray-100"
-        >For devs: Firestore data model => user -> user uid -> notes
-      </span>
       <suspense timeout="0">
         <NoteList class="mt-10" />
         <template #fallback>
