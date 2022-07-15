@@ -1,7 +1,7 @@
 {
   "hosting": {
     "public": "dist",
-    "site": "vue3-firebase-auth-11e37",
+    "site": "tutorly-b831e",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {

@@ -5,7 +5,7 @@ import { useForm } from '@/composables/useForm'
 
 const { email, password, toggle, schema } = useForm()
 
-// eslint-disable-next-line no-undef
+/* eslint-disable-next-line no-undef */
 defineProps({
   loading: {
     type: Boolean,
@@ -13,8 +13,11 @@ defineProps({
   }
 })
 
-// eslint-disable-next-line no-undef
+/* eslint-disable-next-line no-undef */
 const emit = defineEmits(['submit'])
+
+/* eslint-disable-next-line no-undef */
+// console.log(typeof loading.value)
 
 function register() {
   emit('submit', { email: email.value, password: password.value })
@@ -51,15 +54,7 @@ function register() {
             name="password"
             :type="!toggle ? 'password' : 'text'"
             placeholder="password"
-            class="
-              relative
-              mb-2
-              w-full
-              rounded
-              border border-slate-800
-              p-2
-              text-slate-800
-            "
+            class="relative mb-2 w-full rounded border border-slate-800 p-2 text-slate-800"
           />
           <div class="absolute inset-y-2 right-0 pr-3">
             <div class="flex items-center" @click="toggle = !toggle">
@@ -73,7 +68,6 @@ function register() {
         }}</span>
       </div>
       <p v-if="errMsg" class="text-red-500">{{ errMsg }}</p>
-
       <button
         class="mb-2 w-full rounded bg-slate-700 p-2"
         type="submit"
@@ -82,5 +76,8 @@ function register() {
         {{ loading.value ? 'Please wait...' : 'Register' }}
       </button>
     </Form>
+  </div>
+  <div>
+    <!-- <h1>{{ loading.value }}</h1> -->
   </div>
 </template>
