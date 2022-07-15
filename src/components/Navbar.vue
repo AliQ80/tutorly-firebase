@@ -35,7 +35,7 @@ const handleSignOut = () => {
         ><h1 class="font-salsa text-2xl">📚 Tutorly</h1></router-link
       >
       <ul class="flex space-x-5">
-        <li><router-link to="/crud">CRUD</router-link></li>
+        <li><router-link to="/crud">Notes</router-link></li>
         <span v-if="loggedIn" class="flex space-x-4">
           <li><router-link to="/profile">Profile</router-link></li>
           <button
