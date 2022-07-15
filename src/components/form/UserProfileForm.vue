@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-mutating-props -->
 <template>
   <div>
     <form @submit="submit">
@@ -34,7 +35,7 @@
                 class="w-full rounded bg-slate-900 p-2 text-white"
                 @click="updateEmail"
               >
-                Update Emaiil
+                Update Email
               </button>
             </div>
           </div>
@@ -45,17 +46,29 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue';
+import { defineProps } from 'vue'
 import { PencilIcon } from '@heroicons/vue/solid'
 
-defineProps: {
-	imgsrc: {
-		type: String,
-		default: 'https://picsum.photos/200/300',
-	},
-	name: {
-		type: String,
-		default: 'Name cannot be blank',
-	},
-}
+// eslint-disable-next-line no-unused-vars
+const props = defineProps({
+  imgsrc: {
+    type: String,
+    default: 'https://picsum.photos/200/300'
+  },
+  name: {
+    type: String,
+    default: 'Name cannot be blank'
+  }
+})
+
+// defineProps: {
+// 	imgsrc: {
+// 		type: String,
+// 		default: 'https://picsum.photos/200/300',
+// 	},
+// 	name: {
+// 		type: String,
+// 		default: 'Name cannot be blank',
+// 	},
+// }
 </script>

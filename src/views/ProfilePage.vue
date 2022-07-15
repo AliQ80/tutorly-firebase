@@ -137,7 +137,15 @@ const updateEmail = async () => {
         <div
           class="mb-3 flex w-full flex-col items-center space-y-2 text-center"
         >
-          <img :src="cPhotourl" alt="" class="h-20 w-20 rounded-full" />
+          <img
+            :src="
+              cPhotourl
+                ? 'cPhotourl'
+                : 'https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png'
+            "
+            alt="Avatar"
+            class="h-40 w-40 rounded-3xl"
+          />
           <UploadButton />
           <button @click="uploadProfilePhoto">Upload</button>
         </div>
@@ -182,7 +190,7 @@ const updateEmail = async () => {
               class="w-full rounded bg-slate-900 p-2 text-white"
               @click="updateEmail"
             >
-              Update Emaiil
+              Update Email
             </button>
           </div>
         </div>
