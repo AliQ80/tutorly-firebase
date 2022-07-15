@@ -9,7 +9,6 @@
     </div>
   </div> -->
   <label class="block">
-    <span class="sr-only">Choose profile photo</span>
     <input
       id="formFile"
       type="file"
