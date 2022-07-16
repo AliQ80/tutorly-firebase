@@ -131,18 +131,20 @@ const updateEmail = async () => {
 
 <template>
   <div>
-    <h1 class="mb-5 text-lg">Profile Information</h1>
+    <div class="flex justify-center">
+      <h1 class="mb-5 text-2xl">Profile Information</h1>
+    </div>
     <div class="flex items-center justify-center">
       <div class="box h-fit min-w-max rounded dark:bg-slate-800 p-10">
         <div class="mb-3 flex w-full flex-col items-center space-y-2 text-center">
           <img
             :src="
               cPhotourl
-                ? 'cPhotourl'
+                ? cPhotourl
                 : 'https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png'
             "
             alt="Avatar"
-            class="h-40 w-40 rounded-3xl" />
+            class="object-cover object-ceter mb-8 h-40 w-40 rounded-3xl" />
           <UploadButton />
           <button
             class="btn btn-primary"
@@ -150,7 +152,7 @@ const updateEmail = async () => {
             Upload
           </button>
         </div>
-        <div class="space-y-3">
+        <div class="space-y-3 mt-4">
           <span
             v-if="!name"
             class="flex text-white">Update your profile
@@ -165,7 +167,7 @@ const updateEmail = async () => {
               class="w-full border-b bg-slate-800 p-2 text-sm text-white"
               placeholder="Full Name" />
           </div>
-          <div class="flex flex-col dark:text-white">
+          <!-- <div class="flex flex-col dark:text-white">
             <label
               for="photourl"
               class="text-sm">Photo URL</label>
@@ -173,7 +175,7 @@ const updateEmail = async () => {
               v-model="cPhotourl"
               class="w-full border-b bg-slate-800 p-2 text-sm text-white"
               placeholder="Photo URL" />
-          </div>
+          </div> -->
 
           <button
             class="w-full rounded bg-slate-900 p-2 text-white"
