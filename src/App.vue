@@ -3,10 +3,12 @@ import Navbar from './components/Navbar.vue'
 </script>
 
 <template>
-  <div class="p-4 text-slate-800 dark:text-white md:px-80 md:py-10">
+  <div class="p-4 text-slate-800 dark:text-white">
     <Navbar />
     <!-- <router-view /> -->
-    <router-view v-slot="{ Component }" class="py-20">
+    <router-view
+      v-slot="{ Component }"
+      class="py-20">
       <template v-if="Component">
         <transition mode="out-in">
           <keep-alive>
@@ -18,4 +20,5 @@ import Navbar from './components/Navbar.vue'
   </div>
 </template>
 
-<style></style>
+<style>
+</style>
