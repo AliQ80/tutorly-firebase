@@ -147,7 +147,7 @@ const updateEmail = async () => {
             class="object-cover object-ceter mb-8 h-40 w-40 rounded-3xl" />
           <UploadButton />
           <button
-            class="btn btn-primary"
+            class="btn btn-primary btn-wide"
             @click="uploadProfilePhoto">
             Upload
           </button>
@@ -177,11 +177,13 @@ const updateEmail = async () => {
               placeholder="Photo URL" />
           </div> -->
 
-          <button
-            class="w-full rounded bg-slate-900 p-2 text-white"
-            @click="updateProfile">
-            Update Profile
-          </button>
+          <div class="flex justify-center">
+            <button
+              class="btn btn-primary btn-wide"
+              @click="updateProfile">
+              Update Profile
+            </button>
+          </div>
 
           <div class="mt-5 space-y-2">
             <div class="flex flex-col dark:text-white">
@@ -190,12 +192,14 @@ const updateEmail = async () => {
                 v-model="cEmail"
                 class="w-full border-b bg-slate-800 p-2 text-sm text-white" />
             </div>
+            <div class="flex justify-center">
+              <button
+                class="btn btn-primary btn-wide"
+                @click="updateEmail">
+                Update Email
+              </button>
+            </div>
 
-            <button
-              class="w-full rounded bg-slate-900 p-2 text-white"
-              @click="updateEmail">
-              Update Email
-            </button>
           </div>
         </div>
       </div>
