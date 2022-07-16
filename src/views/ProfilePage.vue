@@ -133,7 +133,7 @@ const updateEmail = async () => {
   <div class="container">
     <h1 class="mb-5 text-lg">Profile Information</h1>
     <div class="flex items-center justify-center">
-      <div class="box h-fit w-full rounded bg-slate-800 p-10">
+      <div class="box h-fit w-full rounded dark:bg-slate-800 p-10">
         <div class="mb-3 flex w-full flex-col items-center space-y-2 text-center">
           <img
             :src="
@@ -162,7 +162,7 @@ const updateEmail = async () => {
           <div class="flex flex-col">
             <label
               for="name"
-              class="text-sm text-white"
+              class="text-sm dark:text-white"
             > Full Name </label>
             <input
               v-model="cName"
@@ -170,7 +170,7 @@ const updateEmail = async () => {
               placeholder="Full Name"
             />
           </div>
-          <div class="flex flex-col text-white">
+          <div class="flex flex-col dark:text-white">
             <label
               for="photourl"
               class="text-sm"
@@ -190,7 +190,7 @@ const updateEmail = async () => {
           </button>
 
           <div class="mt-5 space-y-2">
-            <div class="flex flex-col text-white">
+            <div class="flex flex-col dark:text-white">
               <label for="email">Email address</label>
               <input
                 v-model="cEmail"
