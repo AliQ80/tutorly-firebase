@@ -7,7 +7,6 @@ import ToggleTheme from './ToggleTheme.vue'
 
 const router = useRouter()
 const loggedIn = ref(true)
-
 let auth
 
 onMounted(() => {
@@ -31,26 +30,36 @@ const handleSignOut = () => {
 <template>
   <div>
     <nav class="flex">
-      <router-link to="/" class="flex-1"
-        ><h1 class="font-salsa text-2xl">📚 Tutorly</h1></router-link
-      >
+      <router-link to="/" class="flex-1">
+        <h1 class="font-salsa text-2xl">📚 Tutorly</h1>
+      </router-link>
+
       <ul class="flex space-x-5">
-        <li><router-link to="/crud">Notes</router-link></li>
         <span v-if="loggedIn" class="flex space-x-4">
-          <li><router-link to="/profile">Profile</router-link></li>
+          <li>
+            <router-link to="/crud">Notes</router-link>
+          </li>
+          <li>
+            <router-link to="/profile">Profile</router-link>
+          </li>
           <button
             v-if="loggedIn"
             class="flex items-center space-x-2 rounded border px-2"
-            @click="handleSignOut"
-          >
+            @click="handleSignOut">
             <LogoutIcon class="h-4 w-4" />
           </button>
         </span>
         <span v-else class="flex space-x-4">
-          <li><router-link to="/login">Login</router-link></li>
-          <li><router-link to="/register">Register</router-link></li>
+          <li>
+            <router-link to="/login">Login</router-link>
+          </li>
+          <li>
+            <router-link to="/register">Register</router-link>
+          </li>
         </span>
-        <li><ToggleTheme /></li>
+        <li>
+          <ToggleTheme />
+        </li>
       </ul>
     </nav>
   </div>
