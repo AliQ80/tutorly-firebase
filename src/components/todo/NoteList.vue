@@ -77,24 +77,24 @@ const cancel = () => {
 
 <template>
   <div>
-    <div class="grid grid-cols-2 gap-3">
+    <div class="grid grid-cols-2 gap-3 max-w-3xl mx-20">
       <NoteListItem
         v-for="note in notes"
         :key="note.id"
         data-test="note-list"
         :note="note"
         @delete-note="deleteNote(note)"
-        @show-modal="showModal(note)"
-      />
+        @show-modal="showModal(note)" />
     </div>
 
     <note-modal
       v-model="show"
       name="edit"
       @cancel="cancel"
-      @confirm="updateNote(params)"
-    >
-      <template #title><h1 class="mb-2">Edit Note</h1></template>
+      @confirm="updateNote(params)">
+      <template #title>
+        <h1 class="mb-2">Edit Note</h1>
+      </template>
       <template #default="{ params }">
         <div
           class="
@@ -103,8 +103,7 @@ const cancel = () => {
             border border-dashed border-slate-900
             p-5
             dark:border-slate-50
-          "
-        >
+          ">
           <div class="form-group mb-2 flex flex-col">
             <label for="title">Title</label>
             <input
@@ -113,8 +112,7 @@ const cancel = () => {
               type="text"
               class="border-b bg-slate-800 p-2 text-sm text-white"
               required
-              name="title"
-            />
+              name="title" />
           </div>
 
           <div class="form-group flex flex-col">
@@ -124,13 +122,11 @@ const cancel = () => {
               v-model="params.description"
               class="border-b bg-slate-800 p-2 text-sm text-white"
               required
-              name="description"
-            />
+              name="description" />
           </div>
           <button
             class="mt-2 w-full rounded bg-slate-800 p-2 text-white"
-            @click="updateNote(params)"
-          >
+            @click="updateNote(params)">
             Update
           </button>
         </div>

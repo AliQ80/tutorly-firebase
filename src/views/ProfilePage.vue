@@ -130,10 +130,10 @@ const updateEmail = async () => {
 </script>
 
 <template>
-  <div class="container">
+  <div>
     <h1 class="mb-5 text-lg">Profile Information</h1>
     <div class="flex items-center justify-center">
-      <div class="box h-fit w-full rounded dark:bg-slate-800 p-10">
+      <div class="box h-fit min-w-max rounded dark:bg-slate-800 p-10">
         <div class="mb-3 flex w-full flex-col items-center space-y-2 text-center">
           <img
             :src="
@@ -142,50 +142,42 @@ const updateEmail = async () => {
                 : 'https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png'
             "
             alt="Avatar"
-            class="h-40 w-40 rounded-3xl"
-          />
+            class="h-40 w-40 rounded-3xl" />
           <UploadButton />
           <button
             class="btn btn-primary"
-            @click="uploadProfilePhoto"
-          >
+            @click="uploadProfilePhoto">
             Upload
           </button>
         </div>
         <div class="space-y-3">
           <span
             v-if="!name"
-            class="flex text-white"
-          >Update your profile
+            class="flex text-white">Update your profile
             <PencilIcon class="ml-2 h-5 w-5" />
           </span>
           <div class="flex flex-col">
             <label
               for="name"
-              class="text-sm dark:text-white"
-            > Full Name </label>
+              class="text-sm dark:text-white"> Full Name </label>
             <input
               v-model="cName"
               class="w-full border-b bg-slate-800 p-2 text-sm text-white"
-              placeholder="Full Name"
-            />
+              placeholder="Full Name" />
           </div>
           <div class="flex flex-col dark:text-white">
             <label
               for="photourl"
-              class="text-sm"
-            >Photo URL</label>
+              class="text-sm">Photo URL</label>
             <input
               v-model="cPhotourl"
               class="w-full border-b bg-slate-800 p-2 text-sm text-white"
-              placeholder="Photo URL"
-            />
+              placeholder="Photo URL" />
           </div>
 
           <button
             class="w-full rounded bg-slate-900 p-2 text-white"
-            @click="updateProfile"
-          >
+            @click="updateProfile">
             Update Profile
           </button>
 
@@ -194,14 +186,12 @@ const updateEmail = async () => {
               <label for="email">Email address</label>
               <input
                 v-model="cEmail"
-                class="w-full border-b bg-slate-800 p-2 text-sm text-white"
-              />
+                class="w-full border-b bg-slate-800 p-2 text-sm text-white" />
             </div>
 
             <button
               class="w-full rounded bg-slate-900 p-2 text-white"
-              @click="updateEmail"
-            >
+              @click="updateEmail">
               Update Email
             </button>
           </div>
