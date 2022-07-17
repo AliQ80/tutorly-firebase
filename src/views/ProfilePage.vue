@@ -130,7 +130,7 @@ const updateEmail = async () => {
 </script>
 
 <template>
-  <div>
+  <div class="container mx-auto">
     <div class="flex justify-center">
       <h1 class="mb-5 text-2xl">Profile Information</h1>
     </div>
