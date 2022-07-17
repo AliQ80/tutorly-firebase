@@ -20,7 +20,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="container">
+  <div class="container mx-auto">
     <div class="flex flex-col">
       <h1 class="mb-2 text-lg">Create an account</h1>
       <RegisterForm :loading="isLoading" @submit="register" />

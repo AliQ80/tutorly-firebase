@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <div class="container">
+  <div class="container mx-auto">
     <!-- <AppLogos class="my-10" /> -->
     <!-- <README class="prose items-center dark:prose-invert" /> -->
     <!-- <button class="btn btn-primary">Button</button> -->

@@ -22,7 +22,7 @@ onMounted(() => {
 
 
 <template>
-  <div class="container">
+  <div class="container mx-auto">
     <div class="flex flex-col">
       <h1 class="mb-2 text-lg">Login with your account</h1>
       <LoginForm :loading="isLoading" @submit="login" />
