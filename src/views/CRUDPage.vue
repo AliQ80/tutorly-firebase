@@ -26,7 +26,8 @@ function cancel() {
   <div>
     <button
       class="rounded bg-slate-800 p-2 text-white"
-      @click="showModal">
+      @click="showModal"
+    >
       ✏️ New note
     </button>
     <div class="mt-10">
@@ -47,7 +48,8 @@ function cancel() {
         v-model="show"
         name="add"
         @cancel="cancel"
-        @confirm="updateNote(params)">
+        @confirm="updateNote(params)"
+      >
         <template #title>
           <h1 class="mb-2">Add Note</h1>
         </template>
