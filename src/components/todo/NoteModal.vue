@@ -3,7 +3,10 @@
     v-slot="{ params, close }"
     v-bind="$attrs"
     classes="flex justify-center items-center"
-    content-class="relative flex flex-col max-h-full w-1/3 mx-4 p-10 border dark:border-gray-800 rounded bg-white dark:bg-gray-900">
+    overlay-style="opacity-10"
+    content-class="relative flex flex-col max-h-full w-1/3 mx-4 p-10 border dark:border-gray-800 rounded bg-white dark:bg-gray-900"
+    v-on="$listeners"
+  >
     <span class="mr-8 text-2xl font-bold">
       <slot name="title"></slot>
     </span>
