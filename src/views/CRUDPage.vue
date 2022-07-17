@@ -13,7 +13,6 @@ const NoteList = defineAsyncComponent(() =>
 
 function showModal() {
   show.value = true
-  console.log(show.value)
   vfm.show('add')
 }
 
